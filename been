@@ -1,0 +1,51 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Mail, Github, Linkedin } from "lucide-react";
+
+export default function CyberbeenApp() {
+  return (
+    <div className="min-h-screen bg-gray-100 p-6 grid gap-6">
+      <header className="text-center">
+        <h1 className="text-4xl font-bold text-blue-800">Cyberbeen</h1>
+        <p className="text-lg text-gray-600">Cybersecurity Student & Tech Enthusiast</p>
+      </header>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-2">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Card>
+            <CardContent>
+              <h3 className="text-xl font-bold">AI Door Lock</h3>
+              <p>Smart security system using Raspberry Pi, fingerprint sensor, and AI for facial recognition.</p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent>
+              <h3 className="text-xl font-bold">Data Center Access</h3>
+              <p>Microcontroller-based system to control and monitor access to sensitive infrastructure.</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-2">Certificates</h2>
+        <ul className="list-disc pl-6 text-gray-700">
+          <li>Cisco CCNA (Networking Basics)</li>
+          <li>Linux Essentials</li>
+          <li>Cybersecurity Fundamentals</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-2">Contact</h2>
+        <div className="flex gap-4">
+          <Button variant="outline"><Mail className="mr-2" /> Email</Button>
+          <Button variant="outline"><Github className="mr-2" /> GitHub</Button>
+          <Button variant="outline"><Linkedin className="mr-2" /> LinkedIn</Button>
+        </div>
+      </section>
+    </div>
+  );
+}
